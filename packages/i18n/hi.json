@@ -1,0 +1,22 @@
+{
+  "app.title": "थर्मल इंटेलिजेंस प्लेटफ़ॉर्म",
+  "app.subtitle": "औद्योगिक थर्मल निगरानी एवं आपातकालीन निर्णय सहायता",
+  "health.status_ok": "सिस्टम चालू है",
+  "health.status_degraded": "सिस्टम सीमित मोड में चल रहा है",
+  "nav.dashboard": "डैशबोर्ड",
+  "nav.alerts": "अलर्ट",
+  "nav.map": "नक्शा",
+  "nav.reports": "रिपोर्ट",
+  "nav.settings": "सेटिंग्स",
+  "common.loading": "लोड हो रहा है…",
+  "common.error": "एक त्रुटि हुई",
+  "common.retry": "पुनः प्रयास करें",
+  "common.degraded_mode": "डेटा स्रोत अनुपलब्ध — अंतिम ज्ञात डेटा दिखा रहे हैं",
+  "common.no_data": "कोई डेटा उपलब्ध नहीं",
+  "alert.level.low": "कम",
+  "alert.level.moderate": "मध्यम",
+  "alert.level.high": "उच्च",
+  "alert.level.critical": "गंभीर",
+  "alert.probable_cause": "संभावित कारण (विश्वास: {confidence}%)",
+  "alert.not_confirmed": "कारण की स्वतंत्र पुष्टि नहीं हुई है"
+}

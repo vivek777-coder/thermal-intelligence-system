@@ -1,0 +1,22 @@
+{
+  "app.title": "Thermal Intelligence Platform",
+  "app.subtitle": "Industrial Thermal Monitoring aur Emergency Decision Support",
+  "health.status_ok": "System chal raha hai",
+  "health.status_degraded": "System limited mode mein chal raha hai",
+  "nav.dashboard": "Dashboard",
+  "nav.alerts": "Alerts",
+  "nav.map": "Map",
+  "nav.reports": "Reports",
+  "nav.settings": "Settings",
+  "common.loading": "Load ho raha hai…",
+  "common.error": "Ek error aa gayi",
+  "common.retry": "Dobara try karein",
+  "common.degraded_mode": "Data source available nahi hai — last known data dikha rahe hain",
+  "common.no_data": "Koi data available nahi hai",
+  "alert.level.low": "Low",
+  "alert.level.moderate": "Moderate",
+  "alert.level.high": "High",
+  "alert.level.critical": "Critical",
+  "alert.probable_cause": "Probable cause (confidence: {confidence}%)",
+  "alert.not_confirmed": "Cause independently confirm nahi hua hai"
+}

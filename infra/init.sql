@@ -1,0 +1,6 @@
+-- ============================================================
+-- PostGIS extensions — table schemas added in a later task
+-- ============================================================
+
+CREATE EXTENSION IF NOT EXISTS postgis;
+CREATE EXTENSION IF NOT EXISTS postgis_topology;

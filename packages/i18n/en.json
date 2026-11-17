@@ -1,0 +1,22 @@
+{
+  "app.title": "Thermal Intelligence Platform",
+  "app.subtitle": "Industrial Thermal Monitoring & Emergency Decision Support",
+  "health.status_ok": "System operational",
+  "health.status_degraded": "System running in degraded mode",
+  "nav.dashboard": "Dashboard",
+  "nav.alerts": "Alerts",
+  "nav.map": "Map",
+  "nav.reports": "Reports",
+  "nav.settings": "Settings",
+  "common.loading": "Loading…",
+  "common.error": "An error occurred",
+  "common.retry": "Retry",
+  "common.degraded_mode": "Data source unavailable — showing last known data",
+  "common.no_data": "No data available",
+  "alert.level.low": "Low",
+  "alert.level.moderate": "Moderate",
+  "alert.level.high": "High",
+  "alert.level.critical": "Critical",
+  "alert.probable_cause": "Probable cause (confidence: {confidence}%)",
+  "alert.not_confirmed": "Cause has not been independently confirmed"
+}

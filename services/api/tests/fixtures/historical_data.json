@@ -1,0 +1,71 @@
+[
+  {
+    "scenario_id": "1_clear_weather_confirmed",
+    "description": "Clear-weather confirmed fire (High FRP, clear sky, no public report needed).",
+    "inputs": {
+      "firms_data": { "frp": 1200.0, "confidence_pct": 100, "latitude": 22.345, "longitude": 69.876 },
+      "weather_data": { "observationQuality": "HIGH", "reasonCodes": ["CLEAR_SKY"] },
+      "temporal_behavior": { "classification": "abnormal spike" },
+      "osm_context": { "facility_type": "industrial_zone" },
+      "public_reports": []
+    },
+    "expected_decision": "PUBLIC_EMERGENCY_ALERT_RECOMMENDED",
+    "expected_conflict": false
+  },
+  {
+    "scenario_id": "2_heavy_rain_corroborated",
+    "description": "Heavy-rain with missing FIRMS but corroborated by a highly reliable public report.",
+    "inputs": {
+      "firms_data": { "frp": 0.0, "confidence_pct": 0, "latitude": 22.345, "longitude": 69.876 },
+      "weather_data": { "observationQuality": "LOW", "reasonCodes": ["HEAVY_RAIN", "CLOUD_COVER_100"] },
+      "temporal_behavior": { "classification": "normal" },
+      "osm_context": { "facility_type": "factory" },
+      "public_reports": [
+        {
+          "reliability": { "score": 100.0, "reasons": ["LOCATION_MATCH_HIGH", "THERMAL_CORROBORATION"] }
+        }
+      ]
+    },
+    "expected_decision": "AUTHORITY_ALERT",
+    "expected_conflict": false
+  },
+  {
+    "scenario_id": "3_recurring_normal_flare",
+    "description": "Recurring normal flare at a refinery. Should never trigger public alert.",
+    "inputs": {
+      "firms_data": { "frp": 85.0, "confidence_pct": 95, "latitude": 22.345, "longitude": 69.876 },
+      "weather_data": { "observationQuality": "HIGH", "reasonCodes": ["CLEAR_SKY"] },
+      "temporal_behavior": { "classification": "recurring" },
+      "osm_context": { "facility_type": "industrial_zone" },
+      "public_reports": []
+    },
+    "expected_decision": "AUTHORITY_ALERT",
+    "expected_conflict": false
+  },
+  {
+    "scenario_id": "4_sudden_spike",
+    "description": "Sudden spike vs. baseline at a power plant (triggers authority alert).",
+    "inputs": {
+      "firms_data": { "frp": 350.0, "confidence_pct": 85, "latitude": 22.345, "longitude": 69.876 },
+      "weather_data": { "observationQuality": "HIGH", "reasonCodes": ["CLEAR_SKY"] },
+      "temporal_behavior": { "classification": "sudden" },
+      "osm_context": { "facility_type": "power_plant" },
+      "public_reports": []
+    },
+    "expected_decision": "PUBLIC_WARNING_RECOMMENDED",
+    "expected_conflict": false
+  },
+  {
+    "scenario_id": "5_conflicting_evidence",
+    "description": "Conflicting evidence: high confidence FIRMS but poor weather and no corroboration.",
+    "inputs": {
+      "firms_data": { "frp": 90.0, "confidence_pct": 95, "latitude": 22.345, "longitude": 69.876 },
+      "weather_data": { "observationQuality": "LOW", "reasonCodes": ["HEAVY_RAIN", "CLOUD_COVER_100"] },
+      "temporal_behavior": { "classification": "abnormal spike" },
+      "osm_context": { "facility_type": "unknown" },
+      "public_reports": []
+    },
+    "expected_decision": "HIGH_PRIORITY_AUTHORITY_ALERT",
+    "expected_conflict": true
+  }
+]

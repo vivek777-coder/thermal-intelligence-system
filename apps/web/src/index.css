@@ -1,0 +1,102 @@
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+:root {
+  /* Professional Cream + Beige Light Theme */
+  --color-base: #F5EFE2;
+  --color-surface: #E8DCC8;
+  --color-border: #D8C9AE;
+  
+  /* Text Colors */
+  --color-text-primary: #2E2A24;
+  --color-text-secondary: #7A6F5F;
+  
+  /* Restrained Accent */
+  --color-accent: #2F4858;
+  
+  /* Severity Risk Colors */
+  --color-severity-low: #4CAF50;
+  --color-severity-medium: #FFC107;
+  --color-severity-high: #FF9800;
+  --color-severity-critical: #F44336;
+
+  /* Typography */
+  --font-family-sans: "Inter", "IBM Plex Sans", system-ui, sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(46, 42, 36, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(46, 42, 36, 0.1), 0 2px 4px -1px rgba(46, 42, 36, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(46, 42, 36, 0.1), 0 4px 6px -2px rgba(46, 42, 36, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-sans);
+  background-color: var(--color-base);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base App Layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Map specific overrides */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* UI Utilities */
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.border-subtle {
+  border: 1px solid var(--color-border);
+}
